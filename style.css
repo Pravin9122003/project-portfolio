@@ -1,0 +1,257 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #ecc907;
+  background-color: #f9f9f9;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  transition: background-color 0.5s ease;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1em 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+  padding: 0.5em 1em;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ff9800;
+}
+
+/* Highlight active section link */
+nav.sticky {
+  background: #333;
+}
+
+/* Add smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section styling */
+.section {
+  padding: 4em 1em;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 10vh;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 2.5rem;
+}
+
+/* Home Section */
+.home {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5em 1em;
+  position: relative;
+  color: #fff;
+}
+
+.home img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.8;
+  max-height: 70vh;
+  object-fit: cover;
+  filter: blur(3px);
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+}
+
+.home-content h1 span {
+  color: #ff9800;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff9800;
+  color: #fff;
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 1em;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+/* About Section */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-content img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(5, 95, 251, 0.851);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-content img:hover {
+  transform: scale(1.05);
+}
+
+.about-details {
+  max-width: 600px;
+}
+
+/* Projects Section */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.project-card {
+  max-width: 300px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgb(135, 5, 5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(210, 9, 180, 0.821);
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Skills Section */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2em;
+  justify-content: center;
+}
+
+.skill-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-card h3 {
+  color: #ff9800;
+  margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact-details {
+  text-align: center;
+}
+
+.contact-details a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
