@@ -7,11 +7,9 @@ Animations: CSS animations and JavaScript libraries
 
 Version Control: Git
 portfolio/
-|-- index.html
-|-- css/
-|   |-- styles.css
-|-- js/
-|   |-- main.js
+    index.html
+    styles.css
+    script.js
 |-- images/
-|   |-- (All images and icons used in the website)
+|    (All images and icons used in the website)
 |-- README.md
